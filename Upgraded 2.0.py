@@ -169,16 +169,6 @@ async def view(message: types.Message):
         await bot.send_message(message.chat.id, "An error occurred. Please try again later.")
 
 
-
-
-
-
-
-
-
-
-
-
 # Function to handle the /revoke command
 @dp.message_handler(commands=["revoke"])
 async def revoke(message: types.Message):
@@ -226,16 +216,6 @@ async def revoke(message: types.Message):
     except Exception as e:
         logging.error(str(e))
         await bot.send_message(message.chat.id, "An error occurred. Please try again later.")
-      
-
-
-
-
-
-
-
-
-
 
 # GPT Command
 @dp.message_handler(commands=["gpt"])
@@ -294,21 +274,6 @@ async def gpt(message: types.Message):
         logging.error(str(e))
         await bot.send_message(message.chat.id,
                                "An error occurred. Please try again later.")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 #GPT_Request
@@ -568,19 +533,12 @@ async def process_callback_help(callback_query: types.CallbackQuery):
 
 /gpt ‹Your Question Here›: Generate AI responses.
 For Ex: /gpt Tell me Fact About India.
-
 /feedback ‹Your Feedback Message›: Provide feedback about the bot.
-
 /report ‹User/Message to Report›: Report a user or specific message to the bot.
-
 /donate ‹Openai API Key›: Provide Key To Donate To Bot.
-
 /mute: (Admin only) Mute a user. Reply to a user's message with /mute to mute them.
-
 /unmute: (Admin only) Unmute a user. Reply to a user's message with /unmute to unmute them.
-
 /ban: (Admin only) Ban a user. Reply to a user's message with /ban to ban them.
-
 /unban: (Admin only) Unban a user. Reply to a user's message with /unban to unban them.
 
         """
